@@ -6,8 +6,10 @@ import styles from "./index.module.css";
 export default function Home() {
   const [questionInput, setQuestionInput] = useState("");
   const [result, setResult] = useState();
+  const [loading, setLoading] = useState(false);
 
   async function onSubmit(event) {
+    setLoading(true);
     event.preventDefault();
     const response = await fetch("/api/generate", {
       method: "POST",
@@ -18,7 +20,7 @@ export default function Home() {
     });
     const data = await response.json();
     setResult(data.result);
-    console.log(result);
+    setLoading(false);
     setQuestionInput("");
   }
 
@@ -39,7 +41,10 @@ export default function Home() {
                 setQuestionInput(e.target.value);
               }}
             />
-            <input type="submit" value="Ask Shakespeare!" />
+            <input
+              type="submit"
+              value={loading ? "Loading..." : "Ask Shakespeare!"}
+            />
           </label>
         </form>
         <div className="shakespeareContainer">
