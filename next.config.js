@@ -4,10 +4,4 @@ const nextConfig = {
   swcMinify: true,
 };
 
-module.exports = {
-  images: {
-    domains: ["w7.pngwing.com"],
-  },
-};
-
-// module.exports = nextConfig;
+module.exports = nextConfig;

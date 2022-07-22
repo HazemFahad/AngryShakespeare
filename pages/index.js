@@ -30,7 +30,7 @@ export default function Home() {
         <title>Angry Shakespeare</title>
       </Head>
       <div className="headerContainer">
-        <h1>Grouchy Shakespeare - By Hazem Fahad</h1>
+        <h1>Angry Shakespeare - By Hazem Fahad</h1>
       </div>
       <main className={styles.main}>
         <form onSubmit={onSubmit}>
