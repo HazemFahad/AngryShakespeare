@@ -27,16 +27,19 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Insulting Shakespeare</title>
+        <title>Angry Shakespeare</title>
       </Head>
+      <div className="headerContainer">
+        <h1>Grouchy Shakespeare - By Hazem Fahad</h1>
+      </div>
       <main className={styles.main}>
         <form onSubmit={onSubmit}>
           <label>
-            Enter your question:
             <input
               type="text"
               name="question"
               value={questionInput}
+              placeholder="Enter your question here"
               onChange={(e) => {
                 setQuestionInput(e.target.value);
               }}

@@ -47,3 +47,19 @@ a {
   flex-direction: row-reverse;
   margin-top: 30px;
 }
+
+h1,
+h2 {
+  color: #fff;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 150px;
+  background-color: #4ea9b7;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
